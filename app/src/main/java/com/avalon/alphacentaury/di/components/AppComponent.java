@@ -1,7 +1,9 @@
-package com.avalon.alphacentaury.di;
+package com.avalon.alphacentaury.di.components;
 
 import android.app.Application;
 
+import com.avalon.alphacentaury.di.builders.ActivityBuildersModule;
+import com.avalon.alphacentaury.di.modules.AppModule;
 import com.avalon.alphacentaury.views.activities.BaseApplication;
 
 import dagger.BindsInstance;
@@ -19,6 +21,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         modules = {
                 AndroidSupportInjectionModule.class,
                 ActivityBuildersModule.class,
+                AppModule.class,
         }
 )
 public interface AppComponent extends AndroidInjector<BaseApplication> {
@@ -28,6 +31,7 @@ public interface AppComponent extends AndroidInjector<BaseApplication> {
 
         @BindsInstance
         Builder application(Application application);
+
 
         AppComponent build();
     }

@@ -1,4 +1,4 @@
-package com.avalon.alphacentaury.di;
+package com.avalon.alphacentaury.di.builders;
 
 import com.avalon.alphacentaury.views.activities.LoginActivity;
 
