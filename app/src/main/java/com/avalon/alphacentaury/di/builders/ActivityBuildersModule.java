@@ -1,7 +1,11 @@
 package com.avalon.alphacentaury.di.builders;
 
+import android.app.Application;
+import android.content.Context;
+
 import com.avalon.alphacentaury.views.activities.LoginActivity;
 
+import dagger.Binds;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
@@ -19,5 +23,6 @@ public abstract class ActivityBuildersModule {
     abstract LoginActivity contributeLoginActivity();
 
 
-
+    @Binds
+    abstract Context bindContext(Application application);
 }

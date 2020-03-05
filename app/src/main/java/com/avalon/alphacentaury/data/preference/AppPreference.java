@@ -1,10 +1,11 @@
 package com.avalon.alphacentaury.data.preference;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+import android.util.Log;
 
 import javax.inject.Inject;
+
+import dagger.Provides;
 
 
 
@@ -12,7 +13,7 @@ import javax.inject.Inject;
 public class AppPreference {
 
 
-    // common
+
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
@@ -21,6 +22,7 @@ public class AppPreference {
 
     @Inject
     public AppPreference(SharedPreferences sharedPreferences) {
+        Log.d("SharedPreferencesTest", "SharedPreferences ok");
         this.sharedPreferences = sharedPreferences;
         editor = sharedPreferences.edit();
     }
